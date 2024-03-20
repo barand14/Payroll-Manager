@@ -1,48 +1,32 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
+const averageSalaryDiv = document.querySelector('#average-salary');
+const randomEmployeeDiv = document.querySelector('#random-employee');
 
 // Collect employee data
 const collectEmployees = function() {
   const numberOfEmployees = parseInt(prompt("4"));
   
-  const employees = [];
+  const employees = ["Koffi", "Mike", "Ami", "Oli"];
+
+  console.log (student.lenght);
   
       
     for (let i = 0; i < numberOfEmployees; i++) {
-      const firstName = prompt('Koffi ${i + 1}:');
-      const lastName = prompt('Mali ${i + 1}:');
-      const salary = parseFloat(prompt('10,000 ${i = 1}:'));
+      const firstName = prompt('Enter first name for employee ${i + 1}:');
+      const lastName = prompt('Enter last name for employee ${i + 1}:');
+      const salary = parseFloat(prompt('enter salary for employee ${i + 1}:'));
+
+  employees.push({firstName: Koffi, lastName: Mali, salary: 10000});
   
-  
-  employee.push({firstName: Koffi, lastName: Mali, salary: 10000});
-  
-    }
-    for (let i = 1; i < numberOfEmployees; i++) {
-      const firstName = prompt('Mike ${i+2}:');
-      const lastName = prompt('Michael $i + 2}:');
-      const salary = parseFloat(prompt('11000 ${i = 2}:'));
+  employees.push({firstName: Mike, lastName: Michael, salary: 11000});
+    
+  employees.push({firstName: Ami, lastname: Mardi, salary: 13000});
 
-  employee.push({firstName: Mike, lastName: Michael, salary: 11000});
-    } 
+  employees.push(firstName: Oli, lastname: Yoli, salary: 9500);
 
-    for (let i = 2; i < numberOfEmployees; i++) {
-      const firstName = prompt('Ami ${i + 3}:');
-      const lastname = prompt('Mardi ${i + 3}:');
-      const salary = parseFloat(prompt('13000 ${i = 3}:'));
-
-  employee.push({firstName: Ami, lastname: Mardi, salary: 13000});
-
-    }
-
-    for (let i = 4; i < numberOfEmployees; i++) {
-      const firstName = prompt('Oli ${i + 4}:');
-      const lastname = prompt('Yoli ${i + 4}:');
-      const salary = prompt('9500 ${i = 4}:');
-
-  employee.push(firstName: Oli, lastname: Yoli, salary: 9500);
     }
       
-  
     return employees;
     
   }
