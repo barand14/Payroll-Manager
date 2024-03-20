@@ -1,7 +1,7 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const averageSalaryDiv = document.querySelector('#average-salary');
-const randomEmployeeDiv = document.querySelector('#random-employee');
+const randomEmployeeDiv = document.q/uerySelector('#random-employee');
 
 // Collect employee data
 const collectEmployees = function() {
@@ -17,30 +17,44 @@ const collectEmployees = function() {
       const lastName = prompt('Enter last name for employee ${i + 1}:');
       const salary = parseFloat(prompt('enter salary for employee ${i + 1}:'));
 
-  employees.push({firstName: Koffi, lastName: Mali, salary: 10000});
+  employees.push({firstName: Koffi, lastName: Mali, salary: 10000,});
   
   employees.push({firstName: Mike, lastName: Michael, salary: 11000});
-    
+
   employees.push({firstName: Ami, lastname: Mardi, salary: 13000});
 
-  employees.push(firstName: Oli, lastname: Yoli, salary: 9500);
+  employees.push({firstName: Oli, lastname: Yoli, salary: 9500});
 
     }
-      
-    return employees;
-    
   }
+      
+    
   
+  return employees;
   // TODO: Get user input to create and return an array of employee objects
 
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
+
+  let totalSalary = 0;
+  
+  for (let i = 0; i < employeesArray.lenght; i++) {
+
+    totalSalary += employeesArray[i].salary
+  }
+const averageSalary =totalSalary/employeesArray.length;
+
+averageSalaryDiv.textContent = 'Average Salary: ${averageSalary.tolocaleString("en-US,", { style: "currency", currency: "USD"})}';
   // TODO: Calculate and display the average salary
 }
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+  const randomIndex = Math.floor(Math.random () * employeesArray.lenght);
+  const randomEmployee = employeesArray[randomIndex];
+  randomEmployeeDiv.textContent = 'Random Employee: ${randomEmployee.firstName} ${randomEmployee.lastName}';
+
   // TODO: Select and display a random employee
 }
 
