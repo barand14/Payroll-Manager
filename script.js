@@ -1,36 +1,34 @@
 // Get a reference to the #add-employees-btn element
 const addEmployeesBtn = document.querySelector('#add-employees-btn');
 const averageSalaryDiv = document.querySelector('#average-salary');
-const randomEmployeeDiv = document.q/uerySelector('#random-employee');
+const randomEmployeeDiv = document.querySelector('#random-employee');
 
 // Collect employee data
+const employees = [];
 const collectEmployees = function() {
-  const numberOfEmployees = parseInt(prompt("4"));
+  // const numberOfEmployees = parseInt(prompt("4"));
   
-  const employees = ["Koffi", "Mike", "Ami", "Oli"];
 
-  console.log (student.lenght);
   
-      
-    for (let i = 0; i < numberOfEmployees; i++) {
       const firstName = prompt('Enter first name for employee ${i + 1}:');
       const lastName = prompt('Enter last name for employee ${i + 1}:');
       const salary = parseFloat(prompt('enter salary for employee ${i + 1}:'));
 
-  employees.push({firstName: Koffi, lastName: Mali, salary: 10000,});
-  
-  employees.push({firstName: Mike, lastName: Michael, salary: 11000});
+  employees.push({firstName: firstName, lastName: lastName, salary: salary,});
+   
+  let addEmployees = confirm("add employees")
+  // If they want to add more employees , then we run it all over again
+  if(addEmployees === true){
+    collectEmployees()
 
-  employees.push({firstName: Ami, lastname: Mardi, salary: 13000});
-
-  employees.push({firstName: Oli, lastname: Yoli, salary: 9500});
-
-    }
   }
+console.log(employees)
+  return employees;
+    
       
     
   
-  return employees;
+}
   // TODO: Get user input to create and return an array of employee objects
 
 
@@ -45,7 +43,7 @@ const displayAverageSalary = function(employeesArray) {
   }
 const averageSalary =totalSalary/employeesArray.length;
 
-averageSalaryDiv.textContent = 'Average Salary: ${averageSalary.tolocaleString("en-US,", { style: "currency", currency: "USD"})}';
+averageSalaryDiv.textContent = 'Average Salary: ${averageSalary.tolocaleString("en-US", { style: "currency", currency: "USD"})}';
   // TODO: Calculate and display the average salary
 }
 
