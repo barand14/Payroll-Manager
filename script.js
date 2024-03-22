@@ -39,9 +39,12 @@ const displayAverageSalary = function (employeesArray) {
 
   for (let i = 0; i < employeesArray.lenght; i++) {
 
-    sum += salary
+    sum += employeesArray[i].salary
   }
+  const averageSalary = sum / employeesArray.length
+
   console.log('Average Salary: ${averageSalary.tolocaleString("en-US", { style: "currency", currency: "USD"})}');
+  return sum / Array.length;
   // TODO: Calculate and display the average salary
 }
 
